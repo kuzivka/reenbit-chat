@@ -1,0 +1,16 @@
+.MessagePreview {
+  position: relative;
+  flex-grow: 1;
+  padding: 10px 15px;
+  &-Contact {
+    margin: 2px;
+  }
+  &-Message {
+    margin: 2px;
+  }
+  &-Date {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

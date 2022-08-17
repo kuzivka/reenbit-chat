@@ -1,10 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ChatCard from "./components/ChatCard.jsx";
 
 function App() {
   return (
     <div className="App">
-      
+      <ChatCard />
     </div>
   );
 }
