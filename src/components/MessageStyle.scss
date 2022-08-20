@@ -1,0 +1,40 @@
+@import "./Variables.scss";
+
+.message {
+  padding: 3px;
+  display: flex;
+  justify-content: start;
+  &--mine {
+    justify-content: flex-end;
+    & .icon {
+      display: none;
+    }
+    & .message-date {
+      text-align: end;
+    }
+  }
+  &-string {
+    display: inline-block;
+    padding: 2px 25px;
+    border-radius: 50px;
+    width: fit-content;
+    max-width: 500px;
+    min-width: 100px;
+    color: #ffffff;
+    text-align: justify;
+    font-family: $chat-font;
+    font-size: 16px;
+    background-color: $received-message;
+    &--mine {
+      background-color: $my-message;
+      color: $received-message;
+    }
+  }
+  &-date {
+    font-family: $chat-font;
+    color: #7e7e7e;
+    margin: 3px 15px;
+    display: block;
+    font-size: 12px;
+  }
+}

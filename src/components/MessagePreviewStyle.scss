@@ -1,16 +1,26 @@
+@import './Variables.scss';
+
 .MessagePreview {
   position: relative;
   flex-grow: 1;
   padding: 10px 15px;
   &-Contact {
     margin: 2px;
+    font-family: $chat-font;
+    font-weight: 400;
+    color: #414753;
   }
   &-Message {
     margin: 2px;
+    font-family: $chat-font;
+    color: #9a9d9c;
   }
   &-Date {
     position: absolute;
     top: 0;
     right: 0;
+    font-family: $chat-font;
+    color: #9a9d9c;
+    font-size: 13px;
   }
 }

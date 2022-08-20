@@ -1,0 +1,14 @@
+@import './Variables.scss';
+
+.chat-header{
+    width: 600px;
+    display: flex;
+    padding: 0 15px;
+    align-items: center;
+    background-color: $title-block;
+    &-title{
+        font-family: $chat-font;
+        color: #585858;
+        padding-left: 30px;
+    }
+}

@@ -10,16 +10,16 @@ root.render(
 );
 
 // 1. UI Components: 
-// ContactListItem
-//    ContactIcon
-//    MessagePreview
+    // ContactListItem
+    //    ContactIcon
+    //    MessagePreview
 // ContactListHeader
-// ListHeader
-// SearchInput - controlled input
+    // ListHeader
+    // SearchInput - controlled input
 // ChatHeader
-// 
-// MineMessage
-// ContactMessage
-//    MessageText
-//    MessageDate
-// MessageInput (textarea)
+ 
+    // MineMessage
+    // ContactMessage
+    //    MessageText
+    //    MessageDate
+    // MessageInput (textarea)

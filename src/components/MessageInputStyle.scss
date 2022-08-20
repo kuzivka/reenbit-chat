@@ -1,0 +1,34 @@
+@import "./Variables.scss";
+
+.input {
+  &-field {
+    font-family: $chat-font;
+    min-width: 400px;
+    resize: none;
+    overflow: hidden;
+    outline: none;
+    padding: 10px 50px 10px 10px;
+    border: $border 1px solid;
+    border-radius: 15px;
+    &::placeholder{
+        color: rgb(161, 161, 161);
+    }
+  }
+  &-container {
+    background-color: #eee;
+    position: relative;
+    width: fit-content;
+    padding: 20px 30px;
+  }
+}
+.send-icon {
+  position: absolute;
+  right: 50px;
+  bottom: 50%;
+  transform: translateY(50%);
+  color: rgb(161, 161, 161);
+  &:hover {
+    cursor: pointer;
+    color: #62b9e6;
+  }
+}

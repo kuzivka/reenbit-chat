@@ -1,0 +1,13 @@
+@import './Variables.scss';
+
+.contact-list-header{
+    box-sizing: border-box;
+    padding-left: 10px;
+    height: 25vh;
+    width: 400px;
+    border-bottom: 1px solid $border;
+    background-color: $title-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
