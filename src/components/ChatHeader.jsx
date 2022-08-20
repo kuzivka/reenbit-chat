@@ -1,12 +1,14 @@
-import Icon from "./Icon";
 import './ChatHeaderStyle.scss';
-import contacts from "../contacts";
+import Icon from "./Icon";
 
-export default function ChatHeader(){
+export default function ChatHeader(props){
+
+const {selectedContact} = props;
+
     return(
         <div className="chat-header">
-            <Icon active src={contacts[0].photo.AlexPhoto} />
-            <h1 className="chat-header-title">Josephina</h1>
+            <Icon active src={Object.values(selectedContact.avatarUrl)} />
+            <h1 className="chat-header-title">{selectedContact.firstName}</h1>
         </div>
     )
 }

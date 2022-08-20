@@ -1,26 +1,27 @@
-@import './Variables.scss';
-.search{
-    position: relative;
-    &-field{
-        font-family: $chat-font;
-        height: 30px;
-        width: 350px;
-        padding-left: 30px;
-        outline: none;
-        border: solid 1px $border;
-        border-radius: 20px;
-        &::placeholder{
-            font-family: $chat-font;
-            font-size: 14px;
-            color: $border;
-        }
+@import "./Variables.scss";
+
+.search {
+  position: relative;
+  &-field {
+    font-family: $chat-font;
+    height: 30px;
+    width: 300px;
+    padding-left: 30px;
+    outline: none;
+    border: solid 1px $border;
+    border-radius: 20px;
+    &::placeholder {
+      font-family: $chat-font;
+      font-size: 14px;
+      color: $border;
     }
-    &-icon{
-        height: 12px;
-        margin: 0 10px;
-        position: absolute;
-        top:50%;
-        transform: translateY(-50%);
-        color: $border;
-    }
+  }
+  &-icon {
+    height: 12px;
+    margin: 0 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $border;
+  }
 }

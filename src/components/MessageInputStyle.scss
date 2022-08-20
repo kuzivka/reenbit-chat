@@ -2,6 +2,7 @@
 
 .input {
   &-field {
+    width: 80%;
     font-family: $chat-font;
     min-width: 400px;
     resize: none;
@@ -15,15 +16,18 @@
     }
   }
   &-container {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
     background-color: #eee;
     position: relative;
-    width: fit-content;
+    width: 100%;
     padding: 20px 30px;
   }
 }
 .send-icon {
   position: absolute;
-  right: 50px;
+  right: 12%;
   bottom: 50%;
   transform: translateY(50%);
   color: rgb(161, 161, 161);

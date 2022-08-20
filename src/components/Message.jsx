@@ -1,24 +1,29 @@
-import "./MessageStyle.scss";
 import { format } from "date-fns";
 import Icon from "./Icon";
-import AlexPhoto from "../images/alex.jpg";
+import "./MessageStyle.scss";
 
-export default function MessageString(props) {
-  const date = format(new Date(2022, 1, 24, 5, 40), "Pp");
+export default function Message(props) {
+  const selectedContact = props.selectedContact;
+
+  const date = props.content.date;
+  const photo = Object.values(selectedContact.avatarUrl);
+  const message = props.content.text;
+
   return (
     <div className={props.mine ? "message message--mine" : "message"}>
-      <Icon src={AlexPhoto} />
-      <div style={{display:'flex', flexDirection:'column'}}>
-      <div
-        className={
-          props.mine ? "message-string--mine message-string" : "message-string"
-        }
-      >
-        <p className="message-string__text">
-          Lorem ipsum dolor sit amet consecte
-        </p>
+      <Icon src={photo} />
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <div
+          className={
+            props.mine
+              ? "message-string--mine message-string"
+              : "message-string"
+          }
+        >
+          <p className="message-string__text">{message} </p>
+        </div>
+        <span className="message-date">{format(date, "Pp")}</span>
       </div>
-      <span className="message-date">{date}</span></div>
     </div>
   );
 }

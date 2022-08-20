@@ -1,12 +1,15 @@
 @import './Variables.scss';
 
+.chats{
+  overflow-y: hidden;
+}
 .chat-card {
   padding: 10px;
+  box-sizing: border-box;
   background: $contacts-color;
   border-bottom: 1px solid $border;
-  max-width: 600px;
-  min-width: 350px;
-  width: fit-content;
+  max-width: 35vw;
+  min-width: fit-content;
   display: flex;
   flex-grow: 1;
   align-items: center;
@@ -20,5 +23,8 @@
     font-family: $chat-font;
     color: #62b9e6;
     font-weight: 400;    
-    padding-left: 15px;
+    padding: 0.83em 15px;
+    margin: 0;
+    border-bottom: 1px solid $border;
+
 }

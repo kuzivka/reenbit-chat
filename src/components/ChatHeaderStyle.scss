@@ -1,11 +1,12 @@
 @import './Variables.scss';
 
 .chat-header{
-    width: 600px;
+    box-sizing: border-box;
     display: flex;
     padding: 0 15px;
     align-items: center;
     background-color: $title-block;
+    border-bottom: 1px solid $border;
     &-title{
         font-family: $chat-font;
         color: #585858;

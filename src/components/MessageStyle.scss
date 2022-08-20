@@ -3,7 +3,7 @@
 .message {
   padding: 3px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   &--mine {
     justify-content: flex-end;
     & .icon {
