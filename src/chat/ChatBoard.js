@@ -5,10 +5,8 @@ import MessageInput from "../components/MessageInput";
 export default function ChatBoard(props) {
   const {
     getChuckJoke,
-    setSelectedContact,
     selectedContact,
     chatState,
-    setChatState,
     appendMessage,
   } = props;
 

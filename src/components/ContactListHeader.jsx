@@ -3,11 +3,12 @@ import Icon from './Icon';
 import SearchInput from './SearchInput';
 import './ContactListHeaderStyle.scss'
 
-export default function ContactListHeader(){
+export default function ContactListHeader(props){
+    const {setFilter} = props;
     return(
         <div className='contact-list-header'>
             <Icon active src={avatar} />
-            <SearchInput />
+            <SearchInput setFilter={setFilter} />
         </div>
     )
 }

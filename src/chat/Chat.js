@@ -6,6 +6,7 @@ export default function Chat() {
   const {
     selectedContact,
     setSelectedContact,
+    setFilter,
     chatState,
     sortedContactList,
     setChatState,
@@ -15,12 +16,13 @@ export default function Chat() {
   return (
     <div style={{ display: "flex", height: "100vh" }}>
       <ContactBoard
+        setFilter={setFilter}
         chatState={chatState}
         setSelectedContact={setSelectedContact}
         sortedContactList={sortedContactList}
       />
       <ChatBoard
-      getChuckJoke={getChuckJoke}
+        getChuckJoke={getChuckJoke}
         setSelectedContact={setSelectedContact}
         selectedContact={selectedContact}
         setChatState={setChatState}

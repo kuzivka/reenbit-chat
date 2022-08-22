@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./MessageInputStyle.scss";
 
 export default function MessageInput(props) {
-  const { appendMessage, getChuckJoke, selectedContact } = props;
+  const { appendMessage, getChuckJoke } = props;
 
   const [message, setMessage] = useState();
 
@@ -15,12 +15,13 @@ export default function MessageInput(props) {
   const sendMessage = () => {
     appendMessage({text: message, date: Date.now(), type: "sent" });
     setMessage('');
-    getChuckJoke(selectedContact);
+    getChuckJoke();
   };
 
   return (
     <div className="input-container">
       <textarea
+      minLength={1}
       value={message}
         className="input-field"
         rows={1}

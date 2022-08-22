@@ -1,10 +1,13 @@
-@import './Variables.scss';
+@import "./Variables.scss";
 
 .MessagePreview {
-  
+  width: 20vw;
+  box-sizing: border-box;
   position: relative;
   flex-grow: 1;
   padding: 10px 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   &-Contact {
     margin: 2px;
     font-family: $chat-font;
@@ -15,6 +18,9 @@
     margin: 2px;
     font-family: $chat-font;
     color: #9a9d9c;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &-Date {
     position: absolute;

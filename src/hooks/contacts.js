@@ -1,5 +1,6 @@
 import taylor from "../images/alex.jpg";
 import mathilda from "../images/josephina.jpg";
+import anhelina from "../images/anhelina.jpg"
 
 const contacts = [
   {
@@ -27,21 +28,21 @@ const contacts = [
     avatarUrl: { mathilda },
     chat: [
       {
-        text: 'sdfjalskdfjalkfjaldjfaldjlk adjlajlfajdlfajdlfjalkdfjalkf ldkfjaldfjlakdfj dflakjdfalkdfa ',
+        text: "Скільки себе пам'ятаю",
         date: 1660998352907,
         type: "sent",
       },
       {
-        text: "Можна я шось спитаю",
+        text: "Завше світили мені",
         date: 1660998622461,
         type: "received",
       },
     ],
   },
   { contactId: "3b30c9d1-3272-628-3c4d0baa8e77",
-  firstName: "jhjhjhj",
-  lastName: "Turner",
-  avatarUrl: { mathilda },
+  firstName: "Anhelina",
+  lastName: "Kuziv",
+  avatarUrl: { anhelina },
   chat: []
 },
 ];
