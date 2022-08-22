@@ -1,5 +1,6 @@
-import { useEffect, useState, useMemo, useCallback } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import contacts from "./contacts";
+
 import { chuckJoke } from "../api/chuckJoke";
 
 const STATE_KEY = "state";
@@ -60,10 +61,12 @@ export default function useChat() {
           lastName.toLowerCase().includes(filterState.toLowerCase)
         );
       })
-      .sort((a, b) =>
-        a.chat[a.chat.length - 1]?.date < b.chat[b.chat.length - 1]?.date
-          ? 1
-          : -1
+      .sort((a, b) =>{
+      if(a.chat[a.chat.length - 1] === undefined) return 1;
+      if(b.chat[b.chat.length - 1] === undefined) return 1;
+      if (a.chat[a.chat.length - 1].date < b.chat[b.chat.length - 1].date) return 1;
+      if (a.chat[a.chat.length - 1].date > b.chat[b.chat.length - 1].date) return -1;
+      return 0;}
       );
   }, [chatState, filterState]);
 
