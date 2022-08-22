@@ -3,10 +3,10 @@ import Icon from "./Icon";
 import "./MessageStyle.scss";
 
 export default function Message(props) {
-  const selectedContact = props.selectedContact;
+   const {chatState, selectedContact} = props;
 
   const date = props.content.date;
-  const photo = Object.values(selectedContact.avatarUrl);
+  let photo = Object.values(selectedContact.avatarUrl);
   const message = props.content.text;
 
   return (

@@ -38,5 +38,11 @@ const contacts = [
       },
     ],
   },
+  { contactId: "3b30c9d1-3272-628-3c4d0baa8e77",
+  firstName: "jhjhjhj",
+  lastName: "Turner",
+  avatarUrl: { mathilda },
+  chat: []
+},
 ];
 export default contacts

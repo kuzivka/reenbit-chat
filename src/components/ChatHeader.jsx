@@ -3,7 +3,7 @@ import Icon from "./Icon";
 
 export default function ChatHeader(props){
 
-const {selectedContact} = props;
+const {chatState, selectedContact} = props;
 
     return(
         <div className="chat-header">

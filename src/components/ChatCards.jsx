@@ -4,22 +4,20 @@ import Icon from "./Icon";
 import MessagePreview from "./MessagePreview";
 
 export default function ChatCards(props) {
-  const { chatState, setSelectedContact } = props;
-
+  const { chatState, setSelectedContact, sortedContactList } = props;
   return (
     <div className="chats">
       <h2 className="list-header">Chats</h2>
-      {
-        chatState.map((contact) => (
+      {sortedContactList.map((contact) => (
           <div
             key={contact.contactId}
             className="chat-card"
             onClick={() => {
-              setSelectedContact(contact);
+              setSelectedContact(contact.contactId);
             }}
           >
-            <Icon src={Object.values(contact.avatarUrl)} />
-            <MessagePreview content={contact} />
+            <Icon active src={Object.values(contact.avatarUrl)} />
+            <MessagePreview contact={contact} />
           </div>
         ))}
     </div>

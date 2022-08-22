@@ -3,9 +3,9 @@ import "./MessagePreviewStyle.scss";
 import format from "date-fns/format";
 
 export default function MessagePreview(props) {
-  const name = props.content.firstName + " " + props.content.lastName;
-  const messagesQuantity = props.content.chat.length - 1;
-  const lastMessage = props.content.chat[messagesQuantity];
+  const name = props.contact.firstName + " " + props.contact.lastName;
+  const messagesQuantity = props.contact.chat.length - 1;
+  const lastMessage = props.contact.chat[messagesQuantity];
 
   console.log();
 

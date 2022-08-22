@@ -3,7 +3,14 @@ import Message from "../components/Message";
 import MessageInput from "../components/MessageInput";
 
 export default function ChatBoard(props) {
-  const { selectedContact } = props;
+  const {
+    getChuckJoke,
+    setSelectedContact,
+    selectedContact,
+    chatState,
+    setChatState,
+    appendMessage,
+  } = props;
 
   return (
     <div
@@ -16,17 +23,23 @@ export default function ChatBoard(props) {
         flexDirection: "column",
       }}
     >
-      <ChatHeader selectedContact={selectedContact} />
-      <div style={{ flexGrow: "1" }}>
-        {selectedContact.chat.map((message) =>
-          message.type === "sent" ? (
-            <Message selectedContact={selectedContact} mine content={message} key={message.date}/>
-          ) : (
-            <Message selectedContact={selectedContact} content={message} key={message.date} />
-          )
-        )}
+      <ChatHeader chatState={chatState} selectedContact={selectedContact} />
+      <div style={{ flexGrow: "1", overflowY: "scroll" }}>
+        {selectedContact.chat.map((message) => (
+          <Message
+            selectedContact={selectedContact}
+            chatState={chatState}
+            mine={message.type === "sent"}
+            content={message}
+            key={message.date}
+          />
+        ))}
       </div>
-      <MessageInput />
+      <MessageInput
+        selectedContact={selectedContact}
+        getChuckJoke={getChuckJoke}
+        appendMessage={appendMessage}
+      />
     </div>
   );
 }
