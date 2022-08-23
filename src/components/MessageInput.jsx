@@ -6,7 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 export default function MessageInput(props) {
   const { appendMessage, getChuckJoke, setMessage, message } = props;
 
-  const notify = () => toast("You got a new message");
+  const notify = () => toast(`You got a new message `);
 
   const handleChange = (event) => {
     setMessage(event.target.value);
@@ -19,9 +19,10 @@ export default function MessageInput(props) {
     }
   };
   const sendMessage = () => {
+    if(message!=='' && message!==" "){
     appendMessage({ text: message, date: Date.now(), type: "sent" });
     setMessage("");
-    getChuckJoke(notify);
+    getChuckJoke(notify);}
   };
 
   return (
