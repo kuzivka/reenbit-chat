@@ -4,7 +4,7 @@ import Icon from "./Icon";
 import MessagePreview from "./MessagePreview";
 
 export default function ChatCards(props) {
-  const { chatState, setSelectedContact, sortedContactList } = props;
+  const { setSelectedContact, sortedContactList, setMessage } = props;
   return (
     <div className="chats">
       <h2 className="list-header">Chats</h2>
@@ -14,6 +14,7 @@ export default function ChatCards(props) {
             className="chat-card"
             onClick={() => {
               setSelectedContact(contact.contactId);
+              setMessage('')
             }}
           >
             <Icon active src={Object.values(contact.avatarUrl)} />

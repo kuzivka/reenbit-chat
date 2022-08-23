@@ -6,6 +6,8 @@ import { chuckJoke } from "../api/chuckJoke";
 const STATE_KEY = "state";
 
 export default function useChat() {
+  const [message, setMessage] = useState();
+
   const [chatState, setChatState] = useState(() => {
     const hasPreviousState = localStorage.hasOwnProperty(STATE_KEY);
     if (hasPreviousState) {
@@ -46,11 +48,12 @@ export default function useChat() {
     [chatState, selectedContact]
   );
 
-  const getChuckJoke = useCallback(() => {
+  const getChuckJoke = useCallback((func) => {
     setTimeout(async () => {
       const joke = await chuckJoke();
-      appendMessage(joke);
+      appendMessage(joke); func();
     }, 15000);
+
   }, [appendMessage]);
 
   const sortedContactList = useMemo(() => {
@@ -70,7 +73,8 @@ export default function useChat() {
       );
   }, [chatState, filterState]);
 
-  return {
+  return {message,
+    setMessage,
     filterState,
     setFilter,
     setChatState,

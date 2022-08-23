@@ -15,7 +15,7 @@ export default function SearchInput(props) {
         onChange={handleChange}
         className="search-field"
         type="text"
-        placeholder="Search or start new chat"
+        placeholder="Search"
       />
     </div>
   );

@@ -3,7 +3,7 @@ import Icon from "./Icon";
 import "./MessageStyle.scss";
 
 export default function Message(props) {
-   const {chatState, selectedContact} = props;
+   const {selectedContact} = props;
 
   const date = props.content.date;
   let photo = Object.values(selectedContact.avatarUrl);

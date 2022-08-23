@@ -1,14 +1,26 @@
+import { useRef, useEffect } from "react";
 import ChatHeader from "../components/ChatHeader";
 import Message from "../components/Message";
 import MessageInput from "../components/MessageInput";
 
 export default function ChatBoard(props) {
+  const bottom = useRef();
+
   const {
+    message,
+    setMessage,
     getChuckJoke,
     selectedContact,
     chatState,
     appendMessage,
   } = props;
+
+  const scrollToBottom = () =>
+    bottom.current.scrollIntoView({ behavior: "smooth" });
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [chatState]);
 
   return (
     <div
@@ -32,8 +44,11 @@ export default function ChatBoard(props) {
             key={message.date}
           />
         ))}
+        <div ref={bottom} />
       </div>
       <MessageInput
+        setMessage={setMessage}
+        message={message}
         selectedContact={selectedContact}
         getChuckJoke={getChuckJoke}
         appendMessage={appendMessage}

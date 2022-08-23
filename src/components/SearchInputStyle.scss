@@ -2,22 +2,27 @@
 
 .search {
   position: relative;
+  width: 95%;
+  align-self: center;
+  box-sizing: border-box;
   &-field {
     font-family: $chat-font;
-    height: 30px;
-    width: 300px;
+    height: 40px;
+    width: 100%;
+    justify-self: center;
     padding-left: 30px;
     outline: none;
     border: solid 1px $border;
+    box-sizing: border-box;
     border-radius: 20px;
     &::placeholder {
       font-family: $chat-font;
-      font-size: 14px;
+      font-size: 16px;
       color: $border;
     }
   }
   &-icon {
-    height: 12px;
+    height: 14px;
     margin: 0 10px;
     position: absolute;
     top: 50%;
