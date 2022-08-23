@@ -5,8 +5,7 @@ import anhelina from "../images/anhelina.jpg"
 const contacts = [
   {
     contactId: "a316e691-6904-4cc6-a738-3a6e2e8b1de7",
-    firstName: "Taylor",
-    lastName: "Hoover",
+    firstName: "Taylor Hoover",
     avatarUrl: { taylor },
     chat: [
       {
@@ -23,8 +22,7 @@ const contacts = [
   },
   {
     contactId: "3b30c9d1-3272-46b5-b628-3c4d0baa8e77",
-    firstName: "Mathilda",
-    lastName: "Turner",
+    firstName: "Mathilda Turner",
     avatarUrl: { mathilda },
     chat: [
       {
@@ -40,8 +38,7 @@ const contacts = [
     ],
   },
   { contactId: "3b30c9d1-3272-628-3c4d0baa8e77",
-  firstName: "Anhelina",
-  lastName: "Kuziv",
+  firstName: "Anhelina Kuziv",
   avatarUrl: { anhelina },
   chat: []
 },

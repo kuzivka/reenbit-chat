@@ -48,32 +48,35 @@ export default function useChat() {
     [chatState, selectedContact]
   );
 
-  const getChuckJoke = useCallback((func) => {
-    setTimeout(async () => {
-      const joke = await chuckJoke();
-      appendMessage(joke); func();
-    }, 15000);
-
-  }, [appendMessage]);
+  const getChuckJoke = useCallback(
+    (func) => {
+      setTimeout(async () => {
+        const joke = await chuckJoke();
+        appendMessage(joke);
+        func();
+      }, 15000);
+    },
+    [appendMessage]
+  );
 
   const sortedContactList = useMemo(() => {
     return chatState
       .filter(({ firstName, lastName }) => {
-        return (
-          firstName.toLowerCase().includes(filterState.toLowerCase()) ||
-          lastName.toLowerCase().includes(filterState.toLowerCase)
-        );
+        return firstName.toLowerCase().includes(filterState.toLowerCase());
       })
-      .sort((a, b) =>{
-      if(a.chat[a.chat.length - 1] === undefined) return 1;
-      if(b.chat[b.chat.length - 1] === undefined) return 1;
-      if (a.chat[a.chat.length - 1].date < b.chat[b.chat.length - 1].date) return 1;
-      if (a.chat[a.chat.length - 1].date > b.chat[b.chat.length - 1].date) return -1;
-      return 0;}
-      );
+      .sort((a, b) => {
+        if (a.chat[a.chat.length - 1] === undefined) return 1;
+        if (b.chat[b.chat.length - 1] === undefined) return 1;
+        if (a.chat[a.chat.length - 1].date < b.chat[b.chat.length - 1].date)
+          return 1;
+        if (a.chat[a.chat.length - 1].date > b.chat[b.chat.length - 1].date)
+          return -1;
+        return 0;
+      });
   }, [chatState, filterState]);
 
-  return {message,
+  return {
+    message,
     setMessage,
     filterState,
     setFilter,

@@ -49,7 +49,7 @@ export default function MessageInput(props) {
             fontFamily: "'Open Sans', sans-serif",
             padding: "16px",
             border: "#006198 solid 2px",
-            backgroundColor: "whitw",
+            backgroundColor: "white",
             color: "#006198",
           },
         }}
