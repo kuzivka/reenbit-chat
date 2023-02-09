@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/reenbit-chat/static/css/main.515a74b7.css",
+    "main.js": "/reenbit-chat/static/js/main.1b10fec5.js",
+    "static/media/alex.jpg": "/reenbit-chat/static/media/alex.21beb1dda1b5ca293c3b.jpg",
+    "static/media/josephina.jpg": "/reenbit-chat/static/media/josephina.34210253eedb52952c0b.jpg",
+    "static/media/anhelina.jpg": "/reenbit-chat/static/media/anhelina.2fb76a00a1ecc374bc7e.jpg",
+    "static/media/avatar.jpg": "/reenbit-chat/static/media/avatar.08759009b1c97f63d3f9.jpg",
+    "index.html": "/reenbit-chat/index.html",
+    "main.515a74b7.css.map": "/reenbit-chat/static/css/main.515a74b7.css.map",
+    "main.1b10fec5.js.map": "/reenbit-chat/static/js/main.1b10fec5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.515a74b7.css",
+    "static/js/main.1b10fec5.js"
+  ]
+}
